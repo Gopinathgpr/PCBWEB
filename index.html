@@ -1,259 +1,603 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TNPCB</title>
-    <link rel="stylesheet" href="./bootstrap.css">
-    <script src="./bootstrap.js"></script>
-    <link rel="stylesheet" href="./style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TNPCB</title>
+  <link rel="stylesheet" href="./bootstrap.css">
+  <script src="./bootstrap.js"></script>
+  <link rel="stylesheet" href="./style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
 </head>
 <script>
-    
-    function adjustFontSize() {
-  const screenWidth = window.innerWidth;
-  
-  // Check if the screen width is less than 1024px
-  if (screenWidth < 1024) {
-    // Calculate font size based on screen width
-    const fontSize = Math.max(9, Math.min(14, screenWidth / 50));
-    document.body.style.fontSize = fontSize + "px";
-  } else {
-    // Reset font size to default for wider screens
-    document.body.style.fontSize = "14px";
+
+  function adjustFontSize() {
+    const screenWidth = window.innerWidth;
+
+    // Check if the screen width is less than 1024px
+    if (screenWidth < 1024) {
+      // Calculate font size based on screen width
+      const fontSize = Math.max(9, Math.min(14, screenWidth / 50));
+      document.body.style.fontSize = fontSize + "px";
+    } else {
+      // Reset font size to default for wider screens
+      document.body.style.fontSize = "14px";
+    }
   }
-}
 
-// Adjust font size on window resize and initial page load
-window.addEventListener("resize", adjustFontSize);
-window.addEventListener("load", adjustFontSize);
-
-
-    function adjustH1FontSize() {
-      const screenWidth = window.innerWidth;
-      const fontSize = Math.max(20, Math.min(50, screenWidth / 20));
-      const h1Elements = document.querySelectorAll("h1");
-      h1Elements.forEach((h1) => {
-        h1.style.fontSize = fontSize + "px";
-      });
-    }
-    window.addEventListener("resize", adjustH1FontSize);
-    window.addEventListener("load", adjustH1FontSize);
-
-    function adjustH6FontSize() {
-      const screenWidth = window.innerWidth;
-      const fontSize = Math.max(12, Math.min(24, screenWidth / 50));
-      const h6Elements = document.querySelectorAll("h6");
-      h6Elements.forEach((h6) => {
-        h6.style.fontSize = fontSize + "px";
-      });
-    }
-    window.addEventListener("resize", adjustH6FontSize);
-    window.addEventListener("load", adjustH6FontSize);
-
-    function adjustH2FontSize() {
-      const screenWidth = window.innerWidth;
-      const fontSize = Math.max(16, Math.min(40, screenWidth / 25));
-      const h2Elements = document.querySelectorAll("h2");
-      h2Elements.forEach((h2) => {
-        h2.style.fontSize = fontSize + "px";
-      });
-    }
-    window.addEventListener("resize", adjustH2FontSize);
-    adjustH2FontSize();
-
-    function adjustAnchorFontSize() {
-  const screenWidth = window.innerWidth;
-  const fontSize = Math.max(9, Math.min(14, screenWidth / 50)); // Adjust these values as needed
-  const anchorElements = document.querySelectorAll("a");
-  anchorElements.forEach((anchor) => {
-    anchor.style.fontSize = fontSize + "px";
-  });
-}
-
-// Attach the function to the resize event and call it initially
-window.addEventListener("resize", adjustAnchorFontSize);
-adjustAnchorFontSize();
+  // Adjust font size on window resize and initial page load
+  window.addEventListener("resize", adjustFontSize);
+  window.addEventListener("load", adjustFontSize);
 
 
+  function adjustH1FontSize() {
+    const screenWidth = window.innerWidth;
+    const fontSize = Math.max(20, Math.min(50, screenWidth / 20));
+    const h1Elements = document.querySelectorAll("h1");
+    h1Elements.forEach((h1) => {
+      h1.style.fontSize = fontSize + "px";
+    });
+  }
+  window.addEventListener("resize", adjustH1FontSize);
+  window.addEventListener("load", adjustH1FontSize);
 
-  </script>
+  function adjustH6FontSize() {
+    const screenWidth = window.innerWidth;
+    const fontSize = Math.max(12, Math.min(24, screenWidth / 50));
+    const h6Elements = document.querySelectorAll("h6");
+    h6Elements.forEach((h6) => {
+      h6.style.fontSize = fontSize + "px";
+    });
+  }
+  window.addEventListener("resize", adjustH6FontSize);
+  window.addEventListener("load", adjustH6FontSize);
+
+  function adjustH2FontSize() {
+    const screenWidth = window.innerWidth;
+    const fontSize = Math.max(16, Math.min(40, screenWidth / 25));
+    const h2Elements = document.querySelectorAll("h2");
+    h2Elements.forEach((h2) => {
+      h2.style.fontSize = fontSize + "px";
+    });
+  }
+  window.addEventListener("resize", adjustH2FontSize);
+  adjustH2FontSize();
+
+  function adjustAnchorFontSize() {
+    const screenWidth = window.innerWidth;
+    const fontSize = Math.max(9, Math.min(14, screenWidth / 50)); // Adjust these values as needed
+    const anchorElements = document.querySelectorAll("a");
+    anchorElements.forEach((anchor) => {
+      anchor.style.fontSize = fontSize + "px";
+    });
+  }
+
+  // Attach the function to the resize event and call it initially
+  window.addEventListener("resize", adjustAnchorFontSize);
+  adjustAnchorFontSize();
+
+
+
+</script>
 <header>
-    <div class="container-fluid  w-100 p-0">
-        <div class="d-flex justify-content-between bg-success">
-            <div class="d-flex gap-2 " style="padding:5px 50px;">
-                <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle btn1 bg-success" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                    English
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                    <li><button class="dropdown-item btn btn-secondary" style="color: green;">Tamil</button></li>
-                    
-                    </ul>
-                </div>
-                
-                <div class="clrgr"></div>
-                <div class="clrblu"></div>
-                <div style="align-content: center; white-space: nowrap;"><a href="">Screen Reader Access</a></div>
-            </div>
-            <div class="d-flex gap-5" style="padding-right: 50px;">
-                <div class="d-flex gap-3">
-                    <div class="align-content-center"><i class="bi bi-search headicons p-2"></i></div>
-                    <div class="align-content-center"><i class="bi bi-person-fill headicons p-2"></i></div>
-                    <div class="align-content-center"><i class="bi bi-telephone headicons p-2"></i></div>
+  <div class="container-fluid  w-100 p-0">
+    <div class="row  bg-success m-0">
+      <div class="col-12 col-md-6 d-flex gap-2 align-items-center" style="padding:5px 50px;">
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle btn1 bg-success" type="button" id="dropdownMenuButton1"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            English
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li><button class="dropdown-item btn btn-secondary" style="color: green;">Tamil</button></li>
 
-                </div>
-                <div class="d-flex gap-3">
-                    <div class="align-content-start"><a href=""><i class="fa-brands fa-twitter social-icons"></i></a></div>
-                    <div class="align-content-start"><a href=""><i class="fa-brands fa-linkedin-in social-icons"></i></a></div>
-                    <div class="align-content-start"><a href=""><i class="fa-brands fa-instagram social-icons"></i></a></div>
-                    <div class="align-content-start"><a href=""><i class="fa-brands fa-facebook social-icons"></i></a></div>
-                </div>
-            </div>
-            
+          </ul>
         </div>
+
+        <div class="clrgr"></div>
+        <div class="clrblu"></div>
+        <div style="align-content: center; white-space: nowrap;"><a href="">Screen Reader Access</a></div>
+      </div>
+      <div class="col-12 col-md-6 d-flex justify-content-end gap-3 align-items-center" style="padding-right: 50px;">
+        <div class="d-flex gap-3">
+          <div class="align-content-center"><i class="bi bi-search headicons p-2"></i></div>
+          <div class="align-content-center"><i class="bi bi-person-fill headicons p-2"></i></div>
+          <div class="align-content-center"><i class="bi bi-telephone headicons p-2"></i></div>
+
+        </div>
+        <div class="d-flex gap-3">
+          <div class="align-content-start"><a href=""><i class="fa-brands fa-twitter social-icons"></i></a></div>
+          <div class="align-content-start"><a href=""><i class="fa-brands fa-linkedin-in social-icons"></i></a></div>
+          <div class="align-content-start"><a href=""><i class="fa-brands fa-instagram social-icons"></i></a></div>
+          <div class="align-content-start"><a href=""><i class="fa-brands fa-facebook social-icons"></i></a></div>
+        </div>
+      </div>
+
+    </div>
+    <div class="row m-0">
+      <div class="col-12">
         <img class="img-fluid w-100" src="./images/design0.1.jpg" alt="">
- 
-         <nav class="navbar navbar-expand navbar-light bg-light m-2">
-            
-                <ul class="navbar-nav">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#"><i class="fa-solid fa-house"></i></a>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link fw-bolder" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      About Us <span><i class="fa-solid fa-angle-down"></i></span>
-                    </a>
-                  
-                    <ul class="dropdown-menu noshadow" aria-labelledby="navbarDropdownMenuLink">
-                      <li><a class="dropdown-item" href="#">About TNPCB</a></li>
-                      <li><a class="dropdown-item" href="#">Board Members</a></li>
-                      <li><a class="dropdown-item" href="#">Organization Structure</a></li>
-                      <li><a class="dropdown-item" href="#">Functions</a></li>
-                      <li><a class="dropdown-item" href="#">Laboratories</a></li>
-                      <li class="dropend">
-                        <a class="dropdown-item dropdown-toggle" href="#" id="navbarDropdownMenuLink1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                          Projects
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink1">
-                          <li><a class="dropdown-item" href="#">Water Quality</a></li>
-                          <li><a class="dropdown-item" href="#">Air Quality</a></li>
-                          <li><a class="dropdown-item" href="#">Care Air Center</a></li>
-                          <li><a class="dropdown-item" href="#">CEPI Action Plan</a></li>
-                          <li><a class="dropdown-item" href="#">Polluted River Stretches</a></li>
-                          <li><a class="dropdown-item" href="#">Success Stories</a></li>
-                        </ul>
-                      </li>
-                      <li><a class="dropdown-item" href="#">Board Initiatives</a></li>
-                      <li><a class="dropdown-item" href="#">Policy Note</a></li>
-                    </ul>
-                  </li>
-                  
-
-                  <li class="nav-item dropdown" >
-                    <a class="nav-link fw-bolder" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Environmental Standards & Legislations<span> <i class="fa-solid fa-angle-down"></i> </span>
-                      </a>
-                      <ul class="dropdown-menu noshadow" aria-labelledby="navbarDropdownMenuLink">
-                        <li><a class="dropdown-item" href="#">Pollution control law series</a></li>
-                        <li><a class="dropdown-item" href="#">MoEF&CC Guidelines</a></li>
-                        <li><a class="dropdown-item" href="#">Industrial standards</a></li>
-                        <li><a class="dropdown-item" href="#">Air Environment</a></li>
-                        <li><a class="dropdown-item" href="#">Water Environment</a></li>
-                        <li><a class="dropdown-item" href="#">Noise Environment</a></li>
-                      </ul>
-                  </li>
-
-                  <li class="nav-item dropdown" >
-                    <a class="nav-link fw-bolder" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Information<span> <i class="fa-solid fa-angle-down"></i> </span>
-                      </a>
-                      <ul class="dropdown-menu noshadow" aria-labelledby="navbarDropdownMenuLink">
-                        <li><a class="dropdown-item" href="#">TNPCB and You</a></li>
-                        <li><a class="dropdown-item" href="#">Annual Reports</a></li>
-                        <li><a class="dropdown-item" href="#">CETP</a></li>
-                        <li><a class="dropdown-item" href="#">17 category Industries</a></li>
-                        <li><a class="dropdown-item" href="#">Closure details</a></li>
-                        <li><a class="dropdown-item" href="#">Pet Coke</a></li>
-                        
-                      </ul>
-                  </li>
-
-                  <li class="nav-item dropdown" >
-                    <a class="nav-link fw-bolder" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        consent managemant<span> <i class="fa-solid fa-angle-down"></i> </span>
-                      </a>
-                      <ul class="dropdown-menu noshadow" aria-labelledby="navbarDropdownMenuLink">
-                        <li><a class="dropdown-item" href="#">Apply for consent -> <span class="blink">OCMMS</span></a></li>                      
-                        <li><a class="dropdown-item" href="#">Fee details</a></li>                      
-                        <li><a class="dropdown-item" href="#">Applications for industry</a></li>                      
-                        <li><a class="dropdown-item" href="#">ENT</a></li>                      
-                        <li><a class="dropdown-item" href="#">Power delegation</a></li>                      
-                        <li><a class="dropdown-item" href="#">DLCC</a></li>                      
-                        <li><a class="dropdown-item" href="#">ZLCC</a></li>                      
-                        <li><a class="dropdown-item" href="#">CCC</a></li>                      
-                        <li><a class="dropdown-item" href="#">TSC</a></li>                      
-                      </ul>
-                  </li>
-
-                  <li class="nav-item dropdown" >
-                    <a class="nav-link fw-bolder" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        waste managemant<span> <i class="fa-solid fa-angle-down"></i> </span>
-                      </a>
-                      <ul class="dropdown-menu noshadow" aria-labelledby="navbarDropdownMenuLink">                   
-                        <li><a class="dropdown-item" href="#">Solid Waste Management</a></li>                      
-                        <li><a class="dropdown-item" href="#">Hazardous Waste Management</a></li>                      
-                        <li><a class="dropdown-item" href="#">Plastic Waste Management <span class="blink">Meendum Manjappai</span> </a></li>                      
-                        <li><a class="dropdown-item" href="#">Biomedical Waste Management <span class="blink">OBMWMS</a></li>                      
-                        <li><a class="dropdown-item" href="#">Construction and Demolition Waste</a></li>                      
-                        <li><a class="dropdown-item" href="#">E-waste Management</a></li>                      
-                        <li><a class="dropdown-item" href="#">Battery Waste Management</a></li>                      
-                      </ul>
-                  </li>
-
-                  <li class="nav-item dropdown" >
-                    <a class="nav-link fw-bolder" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Realtime Monitoring<span> <i class="fa-solid fa-angle-down"></i> </span>
-                      </a>
-                      <ul class="dropdown-menu noshadow" aria-labelledby="navbarDropdownMenuLink">                   
-                        <li><a class="dropdown-item" href="#">Air/Water</a></li>                                       
-                        <li><a class="dropdown-item" href="#">AQI</a></li>                                       
-                      </ul>
-                  </li>
-
-                  <li class="nav-item dropdown" >
-                    <a class="nav-link fw-bolder" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        citizen Corner<span> <i class="fa-solid fa-angle-down"></i> </span>
-                      </a>
-                      <ul class="dropdown-menu noshadow" aria-labelledby="navbarDropdownMenuLink">                   
-                        <li><a class="dropdown-item" href="#">Open house</a></li>                                       
-                        <li><a class="dropdown-item" href="#">OLGPRS</a></li>                                       
-                        <li><a class="dropdown-item" href="#">RTI</a></li>                                       
-                        <li><a class="dropdown-item" href="#">Public Gos</a></li>                                       
-                        <li><a class="dropdown-item" href="#">Public Hearing</a></li>                                       
-                        <li><a class="dropdown-item" href="#">Environmental Awaren</a></li>                                       
-                        <li><a class="dropdown-item" href="#">NGT</a></li>                                       
-                      </ul>
-                  </li>
-
-                </ul>             
-               
-            
-        </nav> 
-        
-          
-          
+      </div>
     </div>
 
-   
+    <nav class="navbar navbar-expand navbar-light bg-light m-2">
+
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#"><i class="fa-solid fa-house"></i></a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link fw-bolder" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            About Us <span><i class="fa-solid fa-angle-down"></i></span>
+          </a>
+
+          <ul class="dropdown-menu noshadow" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" href="#">About TNPCB</a></li>
+            <li><a class="dropdown-item" href="#">Board Members</a></li>
+            <li><a class="dropdown-item" href="#">Organization Structure</a></li>
+            <li><a class="dropdown-item" href="#">Functions</a></li>
+            <li><a class="dropdown-item" href="#">Laboratories</a></li>
+            <li class="dropend">
+              <a class="dropdown-item dropdown-toggle" href="#" id="navbarDropdownMenuLink1" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Projects
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink1">
+                <li><a class="dropdown-item" href="#">Water Quality</a></li>
+                <li><a class="dropdown-item" href="#">Air Quality</a></li>
+                <li><a class="dropdown-item" href="#">Care Air Center</a></li>
+                <li><a class="dropdown-item" href="#">CEPI Action Plan</a></li>
+                <li><a class="dropdown-item" href="#">Polluted River Stretches</a></li>
+                <li><a class="dropdown-item" href="#">Success Stories</a></li>
+              </ul>
+            </li>
+            <li><a class="dropdown-item" href="#">Board Initiatives</a></li>
+            <li><a class="dropdown-item" href="#">Policy Note</a></li>
+          </ul>
+        </li>
+
+
+        <li class="nav-item dropdown">
+          <a class="nav-link fw-bolder" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Environmental Standards & Legislations<span> <i class="fa-solid fa-angle-down"></i> </span>
+          </a>
+          <ul class="dropdown-menu noshadow" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" href="#">Pollution control law series</a></li>
+            <li><a class="dropdown-item" href="#">MoEF&CC Guidelines</a></li>
+            <li><a class="dropdown-item" href="#">Industrial standards</a></li>
+            <li><a class="dropdown-item" href="#">Air Environment</a></li>
+            <li><a class="dropdown-item" href="#">Water Environment</a></li>
+            <li><a class="dropdown-item" href="#">Noise Environment</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link fw-bolder" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Information<span> <i class="fa-solid fa-angle-down"></i> </span>
+          </a>
+          <ul class="dropdown-menu noshadow" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" href="#">TNPCB and You</a></li>
+            <li><a class="dropdown-item" href="#">Annual Reports</a></li>
+            <li><a class="dropdown-item" href="#">CETP</a></li>
+            <li><a class="dropdown-item" href="#">17 category Industries</a></li>
+            <li><a class="dropdown-item" href="#">Closure details</a></li>
+            <li><a class="dropdown-item" href="#">Pet Coke</a></li>
+
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link fw-bolder" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            consent managemant<span> <i class="fa-solid fa-angle-down"></i> </span>
+          </a>
+          <ul class="dropdown-menu noshadow" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" href="#">Apply for consent -> <span class="blink">OCMMS</span></a></li>
+            <li><a class="dropdown-item" href="#">Fee details</a></li>
+            <li><a class="dropdown-item" href="#">Applications for industry</a></li>
+            <li><a class="dropdown-item" href="#">ENT</a></li>
+            <li><a class="dropdown-item" href="#">Power delegation</a></li>
+            <li><a class="dropdown-item" href="#">DLCC</a></li>
+            <li><a class="dropdown-item" href="#">ZLCC</a></li>
+            <li><a class="dropdown-item" href="#">CCC</a></li>
+            <li><a class="dropdown-item" href="#">TSC</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link fw-bolder" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            waste managemant<span> <i class="fa-solid fa-angle-down"></i> </span>
+          </a>
+          <ul class="dropdown-menu noshadow" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" href="#">Solid Waste Management</a></li>
+            <li><a class="dropdown-item" href="#">Hazardous Waste Management</a></li>
+            <li><a class="dropdown-item" href="#">Plastic Waste Management <span class="blink">Meendum Manjappai</span>
+              </a></li>
+            <li><a class="dropdown-item" href="#">Biomedical Waste Management <span class="blink">OBMWMS</a></li>
+            <li><a class="dropdown-item" href="#">Construction and Demolition Waste</a></li>
+            <li><a class="dropdown-item" href="#">E-waste Management</a></li>
+            <li><a class="dropdown-item" href="#">Battery Waste Management</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link fw-bolder" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Realtime Monitoring<span> <i class="fa-solid fa-angle-down"></i> </span>
+          </a>
+          <ul class="dropdown-menu noshadow" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" href="#">Air/Water</a></li>
+            <li><a class="dropdown-item" href="#">AQI</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link fw-bolder" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            citizen Corner<span> <i class="fa-solid fa-angle-down"></i> </span>
+          </a>
+          <ul class="dropdown-menu noshadow" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" href="#">Open house</a></li>
+            <li><a class="dropdown-item" href="#">OLGPRS</a></li>
+            <li><a class="dropdown-item" href="#">RTI</a></li>
+            <li><a class="dropdown-item" href="#">Public Gos</a></li>
+            <li><a class="dropdown-item" href="#">Public Hearing</a></li>
+            <li><a class="dropdown-item" href="#">Environmental Awaren</a></li>
+            <li><a class="dropdown-item" href="#">NGT</a></li>
+          </ul>
+        </li>
+
+      </ul>
+
+
+    </nav>
+
+
+
+  </div>
+
+
 </header>
+
 <body>
-    
+
+  <div class="banner">
+    <!-- Image Section -->
+    <div class="banner-image">
+      <img src="images/banner1.jpg" alt="Serene Landscape">
+    </div>
+
+    <!-- Video Section -->
+    <div class="banner-video">
+      <div class="video-container">
+        <video autoplay muted loop>
+          <source src="videos/Reels type.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="row bg-info mt-3 d-flex col-12">
+        <div id="carouselExampleControls col-md-7" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner d-flex flex-nowrap">
+            <div class="carousel-item active">
+              <h2 style="height: 50px;">What's New</h2>
+              <div >
+                  <img src="images/news-1.png" alt=""> 
+                  <p>MoEF & CC notification G.S.R.702(E) dated 12.11.2024
+                    regarding List of White Category of Sectors Classified by
+                    CPCB from Time to Time, As per the 2016 Classification
+                    Methodlogy.
+                    
+                    Ambient Air Quality & Noise Level Report in Chennai City
+                    During Deepavali-2024
+
+                    Consent Fees Details
+
+                    Extended Producer Responsibility(EPR) for Plastic
+                    Packaging - Registration of PIBOs and PWPs at EPR portal
+                    before 31.05.2024
+                  </p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <h2 style="height: 50px;">What's New</h2>
+              <div >
+                  <img src="images/news-1.png" alt=""> 
+                  <p>MoEF & CC notification G.S.R.702(E) dated 12.11.2024
+                    regarding List of White Category of Sectors Classified by
+                    CPCB from Time to Time, As per the 2016 Classification
+                    Methodlogy.
+                    
+                    Ambient Air Quality & Noise Level Report in Chennai City
+                    During Deepavali-2024
+
+                    Consent Fees Details
+
+                    Extended Producer Responsibility(EPR) for Plastic
+                    Packaging - Registration of PIBOs and PWPs at EPR portal
+                    before 31.05.2024
+                  </p>
+              </div>
+            </div>
+           
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <div class="container col-4">
+         
+          <div class="card">
+            <div class="card-image" style="background-image: url('./assets/images/thangam.png');"></div>
+            <div class="card-content">
+              <span class="card-title">Thiru. Thangam Thennarasu</span>
+              <div class="card-line"></div>
+              <span class="card-subtitle">Hon'ble Chief Minister</span>
+              <span class="card-text">Govt. of Tamil Nadu</span>
+            </div>
+          </div>
+        
+         
+          <div class="card">
+            <div class="card-image" style="background-image: url('./assets/images/senthil.png');"></div>
+            <div class="card-content">
+              <span class="card-title">Dr. P. Senthil Kumar I.A.S.</span>
+              <div class="card-line"></div>
+              <span class="card-subtitle">Principal Secretary</span>
+              <span class="card-text">Govt. of Tamil Nadu</span>
+            </div>
+          </div>
+        
+        
+          <div class="card">
+            <div class="card-image" style="background-image: url('./assets/images/jayanthi.png');"></div>
+            <div class="card-content">
+              <span class="card-title">Dr. Jayanthi M., I.F.S.</span>
+              <div class="card-line"></div>
+              <span class="card-subtitle">Chairperson</span>
+              <span class="card-text">TN Pollution Control Board</span>
+            </div>
+          </div>
+        
+         
+          <div class="card">
+            <div class="card-image" style="background-image: url('./assets/images/senthil2.png');"></div>
+            <div class="card-content">
+              <span class="card-title">Dr. P. Senthil Kumar I.A.S.</span>
+              <div class="card-line"></div>
+              <span class="card-subtitle">Member Secretary</span>
+              <span class="card-text">TN Pollution Control Board</span>
+            </div>
+          </div>
+        </div>
+      </div> -->
+  <div class="row bg-info mt-3 d-flex p-2">
+    <!-- Carousel Section -->
+    <div id="carouselExampleControls" class="carousel slide col-md-8 col-12" data-bs-ride="carousel">
+      <div class="carousel-inner d-flex">
+        <!-- First carousel item -->
+        <div class="carousel-item active d-flex w-100 p-2">
+          <div class="col-md-6 col-12">
+            <h2 class="text-center" style="height: 50px;">What's New</h2>
+            <div>
+              <img src="images/news-1.png" alt="" class="img-fluid">
+              <p>
+                MoEF & CC notification G.S.R.702(E) dated 12.11.2024 regarding List of White Category of Sectors
+                Classified by CPCB from Time to Time, As per the 2016 Classification Methodology.
+                <br><br>
+                Ambient Air Quality & Noise Level Report in Chennai City During Deepavali-2024
+              </p>
+            </div>
+          </div>
+
+          <!-- Second carousel item -->
+          <div class="col-md-6 col-12 p-2">
+            <h2 class="text-center" style="height: 50px;">What's New</h2>
+            <div>
+              <img src="images/news-1.png" alt="" class="img-fluid">
+              <p>
+                MoEF & CC notification G.S.R.702(E) dated 12.11.2024 regarding List of White Category of Sectors
+                Classified by CPCB from Time to Time, As per the 2016 Classification Methodology.
+                <br><br>
+                Extended Producer Responsibility(EPR) for Plastic Packaging - Registration of PIBOs and PWPs at EPR
+                portal before 31.05.2024
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Third carousel item -->
+        <div class="carousel-item d-flex w-100">
+          <div class="col-md-6 col-12">
+            <h2 class="text-center" style="height: 50px;">What's New</h2>
+            <div>
+              <img src="images/news-1.png" alt="" class="img-fluid">
+              <p>
+                MoEF & CC notification G.S.R.702(E) dated 12.11.2024 regarding List of White Category of Sectors
+                Classified by CPCB from Time to Time, As per the 2016 Classification Methodology.
+                <br><br>
+                Ambient Air Quality & Noise Level Report in Chennai City During Deepavali-2024
+              </p>
+            </div>
+          </div>
+
+          <!-- Fourth carousel item -->
+          <div class="col-md-6 col-12">
+            <h2 class="text-center" style="height: 50px;">What's New</h2>
+            <div>
+              <img src="images/news-1.png" alt="" class="img-fluid">
+              <p>
+                Ambient Air Quality & Noise Level Report in Chennai City During Deepavali-2024
+                <br><br>
+                Consent Fees Details
+                <br><br>
+                Extended Producer Responsibility(EPR) for Plastic Packaging - Registration of PIBOs and PWPs at EPR
+                portal before 31.05.2024
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Carousel controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+
+
+
+
+    <!-- Card Section -->
+    <div class="col-md-4 col-12">
+      <!-- Card 1 -->
+      <div class="card">
+        <div class="card-image" style="background-image: url('images/minister.png');background-size: contain;"></div>
+        <div class="card-content p-3">
+          <span class="card-title">Thiru. Thangam Thennarasu</span>
+          <div class="card-line"></div>
+          <span class="card-subtitle">Hon'ble Minister for Finance, Pensions and Pensionary benefits and Archaeology,
+            Environment, Pollution Control Board and Climate Change</span>
+          <span class="card-text">Govt. of Tamil Nadu</span>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="card">
+
+        <div class="card-content p-3">
+          <span class="card-title">Dr. P. Senthil Kumar I.A.S.</span>
+          <div class="card-line"></div>
+          <span class="card-subtitle">Principal Secretary</span>
+          <span class="card-text">Govt. of Tamil Nadu</span>
+        </div>
+        <div class="card-image" style="background-image: url('images/principal secr.png');background-size: contain;">
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="card">
+        <div class="card-image" style="background-image: url('images/Chairperson.png');background-size: contain; ">
+        </div>
+        <div class="card-content p-3">
+          <span class="card-title">Dr. Jayanthi M., I.F.S.</span>
+          <div class="card-line"></div>
+          <span class="card-subtitle">Chairperson</span>
+          <span class="card-text">TN Pollution Control Board</span>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="card">
+
+        <div class="card-content p-3">
+          <span class="card-title">Dr. P. Senthil Kumar I.A.S.</span>
+          <div class="card-line"></div>
+          <span class="card-subtitle">Member Secretary</span>
+          <span class="card-text">TN Pollution Control Board</span>
+        </div>
+        <div class="card-image" style="background-image: url('images/member\ secr.png');background-size: contain; ">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="campaign-single py-5" style="background-color: #dcf8ec;">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 sticky-widget">
+          <div class="carousel-wrap">
+            <div class="owl-carousel cret">
+              <!-- First Carousel Item -->
+              <div class="item">
+                <div class="testimonial-item bg-light rounded shadow-sm">
+                  <div class="d-flex align-items-center mb-4">
+                    <h5 class="mb-1">What's New</h5>
+                    <img class="flex-shrink-0 p-2" src="images/news-1.png" alt="Tender Image" />
+                  </div>
+                  <div>
+                    <marquee behavior="scroll" direction="up" scrollamount="3" style="margin-bottom: 20px; height: 320px;" onmouseover="this.stop();" onmouseout="this.start();" class="slide-right-list">
+                      <ul class="list-unstyled">
+                        <li>
+                          <a href="#" class="text-reset btn-link">
+                            MoEF & CC notification G.S.R.702(E) dated 12.11.2024 regarding List of White Category of Sectors Classified by CPCB from Time to Time, As per the 2016 Classification Methodology.
+                            <img src="img/gif/new-blink.gif" alt="Blink Icon" style="width: 40px; height: 40px; margin-right: 10px;" />
+                          </a>
+                        </li>
+                        <li><a href="#" class="text-reset btn-link">Ambient Air Quality & Noise Level Report in Chennai City During Deepavali-2024.</a></li>
+                        <li><a href="#" class="text-reset btn-link">Consent Fees Details.</a></li>
+                        <li><a href="#" class="text-reset btn-link">TNPCB - EPR Booklet 2024 - Action Taken on Obligated Entities.</a></li>
+                        <li><a href="#" class="text-reset btn-link">Extended Producer Responsibility(EPR) for Plastic Packaging - Registration of PIBOs and PWPs at EPR portal before 31.05.2024.</a></li>
+                        <li><a href="#" class="text-reset btn-link">Retrofitting of Emission Control Devices in DG Sets with Capacity of 61 KW - less than 800 KW & above in the State of Tamil Nadu.</a></li>
+                        <li><a href="#" class="text-reset btn-link">MoEF & CC notification G.S.R.724(E) dated 04.10.2021 regarding Regulation on Appropriate Use of Reverse Osmosis Based Water Purification System in the States/UTs.</a></li>
+                      </ul>
+                    </marquee>
+                  </div>
+                </div>
+              </div>
+  
+              <!-- Second Carousel Item -->
+              <div class="item">
+                <div class="testimonial-item bg-light rounded shadow-sm">
+                  <div class="d-flex align-items-center mb-4">
+                    <h5 class="mb-1">Tenders</h5>
+                    <img class="flex-shrink-0 p-2" src="assets/images/tender.png" alt="Tender Image" />
+                  </div>
+                  <div>
+                    <marquee behavior="scroll" direction="up" scrollamount="3" style="margin-bottom: 20px; height: 320px;" onmouseover="this.stop();" onmouseout="this.start();" class="slide-right-list">
+                      <ul class="list-unstyled">
+                        <li>
+                          <a href="#" class="text-reset btn-link">
+                            MoEF & CC notification G.S.R.702(E) dated 12.11.2024 regarding List of White Category of Sectors Classified by CPCB from Time to Time, As per the 2016 Classification Methodology.
+                            <img src="img/gif/new-blink.gif" alt="Blink Icon" style="width: 40px; height: 40px; margin-right: 10px;" />
+                          </a>
+                        </li>
+                        <li><a href="#" class="text-reset btn-link">Ambient Air Quality & Noise Level Report in Chennai City During Deepavali-2024.</a></li>
+                        <li><a href="#" class="text-reset btn-link">Consent Fees Details.</a></li>
+                        <li><a href="#" class="text-reset btn-link">TNPCB - EPR Booklet 2024 - Action Taken on Obligated Entities.</a></li>
+                        <li><a href="#" class="text-reset btn-link">Extended Producer Responsibility(EPR) for Plastic Packaging - Registration of PIBOs and PWPs at EPR portal before 31.05.2024.</a></li>
+                        <li><a href="#" class="text-reset btn-link">Retrofitting of Emission Control Devices in DG Sets with Capacity of 61 KW - less than 800 KW & above in the State of Tamil Nadu.</a></li>
+                        <li><a href="#" class="text-reset btn-link">MoEF & CC notification G.S.R.724(E) dated 04.10.2021 regarding Regulation on Appropriate Use of Reverse Osmosis Based Water Purification System in the States/UTs.</a></li>
+                      </ul>
+                    </marquee>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> <!-- End of col-lg-8 -->
+      </div> <!-- End of row -->
+    </div> <!-- End of container -->
+  </section>
+  
 </body>
+
 </html>

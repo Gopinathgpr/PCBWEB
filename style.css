@@ -16,10 +16,12 @@
 }
 
 .dropdown-menu{
+    
     padding: 0;
     min-width: 150px;
     border-radius: 0px;
     box-shadow: 1px 1px 2px 1px rgba(0, 0, 255, .2);
+    z-index: 1000;
     
 }
 .dropdown-menu li{
@@ -144,7 +146,9 @@ header .d-flex a:hover{
 nav{
     box-shadow: 1px 1px 2px 1px rgba(0, 0, 255, .2);
     overflow-x: scroll;
-    scrollbar-width: none;
+    scrollbar-width: none; 
+  
+
 }
 .fa-house{
     color: #198754;
@@ -191,3 +195,168 @@ nav{
         display: none;
     }
 }
+
+
+  /* Banner Section */
+  .banner {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap for smaller screens */
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    height: auto; /* Let the height adjust based on content */
+  }
+
+  /* Image Section */
+  .banner-image {
+    flex: 1 1 50%; /* Allow it to shrink and grow, starting with 50% width */
+    background-color: #f0f0f0;
+    max-height: 450px;
+    overflow: hidden;
+  }
+
+  .banner-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* Video Section */
+  .banner-video {
+    flex: 1 1 50%; /* Same flexible behavior as the image */
+    position: relative;
+    max-height: 450px;
+    overflow: hidden;
+  }
+
+  .video-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+
+  .video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .banner {
+      flex-direction: row; /* Stack image and video vertically */
+    }
+
+    .banner-image,
+    .banner-video {
+      flex: 1 1 100%; /* Make both sections take full width */
+      height: 250px; /* Reduce height for smaller devices */
+    }
+
+    .banner-image img,
+    .video-container video {
+      object-fit: contain; /* Adjust for smaller areas */
+    }
+  }
+
+  @media (max-width: 480px) {
+    .banner-image,
+    .banner-video {
+      height: 200px; /* Further reduce height for very small devices */
+    }
+
+    .banner-image img,
+    .video-container video {
+      object-fit: cover;
+    }
+  }
+
+  .carousel-item{
+    width: 30%;
+    background-color: #f0f0f0;
+    
+  }
+  .carousel-item h2{
+    background-color: #57bf31;
+  }
+  .carousel-item img{
+    padding: 30px;
+  }
+  .carousel-item p{
+    padding: 10px;
+  }
+  .carousel-inner {
+    display: flex;
+  }
+  
+  
+  
+  .carousel-item img {
+    width: 100%; /* Ensure the images stretch to fill the container */
+    height: auto;
+  }
+  
+
+  /* .container {
+    position: relative;
+    width: 100%;
+    max-width: 320px;
+    background: #fafafa;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    padding: 20px;
+  } */
+  
+  .card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    background: rgba(25, 135, 84, 0.8);
+    border-radius: 10px;
+    padding: 8px;
+    color: white;
+  }
+  
+  .card-image {
+    width: 30%;
+    height: 150px;
+    border-radius: 50%;
+    background: url('./assets/images/default.png') no-repeat center;
+    background-size: contain;
+    
+  }
+  
+  .card-content {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .card-title {
+    font-family: Arial, sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.2;
+  }
+  
+  .card-line {
+    height: 2px;
+    background: #d9d9d9;
+    width: 100%;
+  }
+  
+  .card-subtitle {
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+  }
+  
+  .card-text {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+  }
