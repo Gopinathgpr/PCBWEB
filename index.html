@@ -11,17 +11,29 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <script>
     
     function adjustFontSize() {
-      const screenWidth = window.innerWidth;
-      const fontSize = Math.max(9, Math.min(14, screenWidth / 50));
-      document.body.style.fontSize = fontSize + "px";
-    }
-    window.addEventListener("resize", adjustFontSize);
-    window.addEventListener("load", adjustFontSize);
+  const screenWidth = window.innerWidth;
+  
+  // Check if the screen width is less than 1024px
+  if (screenWidth < 1024) {
+    // Calculate font size based on screen width
+    const fontSize = Math.max(9, Math.min(14, screenWidth / 50));
+    document.body.style.fontSize = fontSize + "px";
+  } else {
+    // Reset font size to default for wider screens
+    document.body.style.fontSize = "14px";
+  }
+}
+
+// Adjust font size on window resize and initial page load
+window.addEventListener("resize", adjustFontSize);
+window.addEventListener("load", adjustFontSize);
+
 
     function adjustH1FontSize() {
       const screenWidth = window.innerWidth;
@@ -73,9 +85,9 @@ adjustAnchorFontSize();
 
   </script>
 <header>
-    <div class="container-fluid  w-100 p-0 bg-success">
-        <div class="container d-flex justify-content-between">
-            <div class="d-flex gap-2 p-1 ">
+    <div class="container-fluid  w-100 p-0">
+        <div class="d-flex justify-content-between bg-success">
+            <div class="d-flex gap-2 " style="padding:5px 50px;">
                 <div class="dropdown">
                     <button class="btn btn-secondary dropdown-toggle btn1 bg-success" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                     English
@@ -85,21 +97,12 @@ adjustAnchorFontSize();
                     
                     </ul>
                 </div>
-                <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle btn1 bg-success" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                    Text Size
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                    <li><button class="dropdown-item btn brbtm btn-secondary" style="color: green; padding: 5px;  padding-left: 10px;">A</button></li>
-                    <li><button class="dropdown-item btn brbtm btn-secondary" style="color: green; padding: 3px; padding-left: 10px;"><h6>A+</h6></button></li>
-                    <li><button class="dropdown-item btn brbtm btn-secondary" style="color: green; padding: 1px; padding-left: 10px;"><h4>A+</h4> </button></li>
-                    </ul>
-                </div>
+                
                 <div class="clrgr"></div>
                 <div class="clrblu"></div>
-                <div style="align-content: center;"><a href="">Screen Reader Access</a></div>
+                <div style="align-content: center; white-space: nowrap;"><a href="">Screen Reader Access</a></div>
             </div>
-            <div class="d-flex gap-5">
+            <div class="d-flex gap-5" style="padding-right: 50px;">
                 <div class="d-flex gap-3">
                     <div class="align-content-center"><i class="bi bi-search headicons p-2"></i></div>
                     <div class="align-content-center"><i class="bi bi-person-fill headicons p-2"></i></div>
@@ -117,40 +120,41 @@ adjustAnchorFontSize();
         </div>
         <img class="img-fluid w-100" src="./images/design0.1.jpg" alt="">
  
-         <nav class=" navbar navbar-expand navbar-light bg-light m-2" style="">
-            <div class="container-fluid"> 
+         <nav class="navbar navbar-expand navbar-light bg-light m-2">
+            
                 <ul class="navbar-nav">
                   <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#"><i class="fa-solid fa-house"></i></a>
                   </li>
                   <li class="nav-item dropdown">
                     <a class="nav-link fw-bolder" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      About Us <span> <i class="fa-solid fa-angle-down"></i> </span>
+                      About Us <span><i class="fa-solid fa-angle-down"></i></span>
                     </a>
-
+                  
                     <ul class="dropdown-menu noshadow" aria-labelledby="navbarDropdownMenuLink">
                       <li><a class="dropdown-item" href="#">About TNPCB</a></li>
                       <li><a class="dropdown-item" href="#">Board Members</a></li>
                       <li><a class="dropdown-item" href="#">Organization Structure</a></li>
                       <li><a class="dropdown-item" href="#">Functions</a></li>
-                      <li><a class="dropdown-item" href="#">Laborotories</a></li>
-                      <li class="nav-item dropdown">
-                        <a class="nav-link" href="#" id="navbarDropdownMenuLink1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Projects<span> <i class="fa-solid fa-angle-down"></i> </span>
-                          </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item" href="#">Water Quality</a></li>
-                            <li><a class="dropdown-item" href="#">Air Quality</a></li>
-                            <li><a class="dropdown-item" href="#">Care Air Center</a></li>
-                            <li><a class="dropdown-item" href="#">CEPI Action plan</a></li>
-                            <li><a class="dropdown-item" href="#">Polluted River Stretches</a></li>
-                            <li><a class="dropdown-item" href="#">Success Stories</a></li>
+                      <li><a class="dropdown-item" href="#">Laboratories</a></li>
+                      <li class="dropend">
+                        <a class="dropdown-item dropdown-toggle" href="#" id="navbarDropdownMenuLink1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Projects
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink1">
+                          <li><a class="dropdown-item" href="#">Water Quality</a></li>
+                          <li><a class="dropdown-item" href="#">Air Quality</a></li>
+                          <li><a class="dropdown-item" href="#">Care Air Center</a></li>
+                          <li><a class="dropdown-item" href="#">CEPI Action Plan</a></li>
+                          <li><a class="dropdown-item" href="#">Polluted River Stretches</a></li>
+                          <li><a class="dropdown-item" href="#">Success Stories</a></li>
                         </ul>
                       </li>
                       <li><a class="dropdown-item" href="#">Board Initiatives</a></li>
                       <li><a class="dropdown-item" href="#">Policy Note</a></li>
                     </ul>
                   </li>
+                  
 
                   <li class="nav-item dropdown" >
                     <a class="nav-link fw-bolder" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -239,167 +243,14 @@ adjustAnchorFontSize();
                   </li>
 
                 </ul>             
-                <!-- <ul class="nav navbar-nav">
-                    <li class=" nav-item"> <a href="#"><i class="fas fa-home"></i></a>
-  
-                    </li>
-  
-                    <li class="nav-item dropdown"> <a class="nav-link" href="" data-toggle="dropdown"> About Us <span
-                          class="nav-indicator"> <i class="caret"></i> </span> </a>
-                      <ul class="dropdown-menu" role="menu">
-  
-                        <li class="nav-item"><a href="about-z.html">About TNPCB</a></li>
-  
-                        <li class="nav-item"><a href="">Board Members</a></li>
-  
-                        <li class="nav-item"><a href="">Organization Structure</a></li>
-                        <li class="nav-item"><a href="">Functions </a></li>
-                        <li class="nav-item"><a href="">TNPCB Brochure </a></li>
-                        <li class="nav-item"><a href="">Projects</a></li>
-                        <li class="nav-item"><a href="" download="">Board Initiatives</a></li>
-                        <li class="nav-item"><a href="" download="">Policy Note</a></li>
-                      </ul>
-  
-                    </li>
-  
-                    <li class="nav-item dropdown"><a class="nav-link" href="#" data-toggle="dropdown">Laboratories</a>
-  
-  
-  
-                    </li>
-  
-                    <li class="nav-item dropdown"><a class="nav-link" href="#" data-toggle="dropdown">Environmental
-                        Standards <span class="nav-indicator"><i class="caret"></i></span> </a>
-  
-                      <ul class="dropdown-menu" role="menu">
-  
-                        <li class="nav-item"><a href="#">Pollution control law series</a></li>
-  
-                        <li class="nav-item"><a href="#">MoEF&CC Guidelines </a></li>
-  
-                        <li class="nav-item"><a href="#">Industrial standards</a></li>
-  
-                        <li class="nav-item"><a href="#">Air Environment </a></li>
-  
-                        <li class="nav-item"><a href="#">Water Environment</a></li>
-  
-                        <li class="nav-item"><a href="#">Noise Environment </a></li>
-                      </ul>
-  
-                    </li>
-  
-                    <li class="nav-item dropdown"><a class="nav-link" href="#" data-toggle="dropdown">Enironmental
-                        Legislations <span class="nav-indicator"><i class="caret"></i></span> </a>
-  
-                      <ul class="dropdown-menu" role="menu">
-  
-                        <li class="nav-item"><a href="#">Water Act</a></li>
-  
-                        <li class="nav-item"><a href="#">Air Act </a></li>
-  
-                        <li class="nav-item"><a href="#">Environmental Protection Act </a></li>
-  
-                        <li class="nav-item"><a href="#">EIA Notification</a></li>
-  
-                        <li class="nav-item"><a href="#">CRZ Notification</a></li>
-                        <li class="nav-item"><a href="#">Board Proceedings</a></li>
-                        <li class="nav-item"><a href="#">Circular</a></li>
-                        <li class="nav-item"><a href="#">Government Orders </a></li>
-                        <li class="nav-item"><a href="#">Compendium of Orders</a></li>
-                      </ul>
-  
-                    </li>
-                    <li class="nav-item dropdown"><a class="nav-link" href="#" data-toggle="dropdown">Information &
-                        Publications<span class="nav-indicator"> <i class="caret"></i> </span> </a>
-  
-                      <ul class="dropdown-menu" role="menu">
-  
-                        <li class="nav-item"><a href="#">TNPCB and You</a></li>
-                        <li class="nav-item"><a href="#">Annual Reports</a></li>
-                        <li class="nav-item"><a href="#">CETP</a></li>
-                        <li class="nav-item"><a href="#">17 category Industries</a></li>
-                        <li class="nav-item"><a href="#">Closure details</a></li>
-                        <li class="nav-item"><a href="#">Pet Coke</a></li>
-                      </ul>
-  
-  
-                    </li>
-  
-  
-                    <li class="nav-item dropdown"> <a class="nav-link" href="#" data-toggle="dropdown">Consent
-                        Management<span class="nav-indicator"> <i class="caret"></i> </span> </a>
-  
-                      <ul class="dropdown-menu" role="menu">
-  
-                        <li class="nav-item dropdown"> <a class="nav-link" href="#" data-toggle="dropdown">Apply for
-                            consent<span class="nav-indicator"> <i class="caret"></i> </span> </a>
-                          <ul class="subdropdown-menu" role="menu">
-                            <li class="subnav-item"><a href="#">OCMMS</a>
-                          </ul>
-                        </li>
-                        <li class="nav-item"><a href="#">Fee details</a></li>
-                        <li class="nav-item"><a href="#">Applications for industry</a></li>
-                        <li class="nav-item"><a href="#">Power delegation</a></li>
-                        <li class="nav-item"><a href="#">DLCC</a></li>
-                        <li class="nav-item"><a href="#">ZLCC</a></li>
-                        <li class="nav-item"><a href="#">CCC</a></li>
-                        <li class="nav-item"><a href="#">TSC</a></li>
-                      </ul>
-                    </li>
-                    <li class="nav-item dropdown"><a class="nav-link" href="#" data-toggle="dropdown">Waste
-                        Management<span class="nav-indicator"><i class="caret"></i></span> </a>
-                      <ul class="dropdown-menu dropdown-menu-rt" role="menu" style="width:auto;">
-                        <li class="nav-item"><a href="#">Solid Waste Management</a></li>
-                        <li class="nav-item"><a href="#">Hazardous Waste Management</a></li>
-                        <li class="nav-item dropdown"> <a class="nav-link" href="#" data-toggle="dropdown">Plastic Waste
-                            Management<span class="nav-indicator"> <i class="caret"></i> </span> </a>
-                          <ul class="subdropdown-menu" role="menu">
-                            <li class="subnav-item"><a href="#">Meendum Manjappai</a>
-                          </ul>
-                        </li>
-                        <li class="nav-item dropdown"> <a class="nav-link" href="#" data-toggle="dropdown">Biomedical
-                            Waste Management<span class="nav-indicator"> <i class="caret"></i> </span> </a>
-                          <ul class="subdropdown-menu" role="menu">
-                            <li class="subnav-item"><a href="#">OBMWMS</a>
-                          </ul>
-                        </li>
-                        <li class="nav-item"><a href="#">Construction and Demolition Waste</a></li>
-                        <li class="nav-item"><a href="#">E-waste Management</a></li>
-                        <li class="nav-item"><a href="#">Battery Waste Management</a></li>
-                      </ul>
-                    </li>
-                    <li class="nav-item dropdown"><a class="nav-link" href="#" data-toggle="dropdown">Realtime Monitoring
-                        <span class="nav-indicator"><i class="caret"></i></span> </a>
-                      <ul class="dropdown-menu dropdown-menu-rt" role="menu" style="width:auto;">
-                        <li class="nav-item"><a href="#">Air/water</a></li>
-                        <li class="nav-item"><a href="#">AQI</a></li>
-                      </ul>
-                    </li>
-                    <li class="nav-item dropdown"><a class="nav-link" href="#" data-toggle="dropdown">Citizen corner<span
-                          class="nav-indicator"><i class="caret"></i></span> </a>
-                      <ul class="dropdown-menu dropdown-menu-rt" role="menu" style="width:auto;">
-                        <li class="nav-item"><a href="#">Open house</a></li>
-                        <li class="nav-item"><a href="#">OLGPRS</a></li>
-                        <li class="nav-item"><a href="#">RTI</a></li>
-                        <li class="nav-item"><a href="#">Public Gos</a></li>
-                        <li class="nav-item"><a href="#">Public Hearing</a></li>
-                        <li class="nav-item"><a href="#">Environmental Awareness</a></li>
-                      </ul>
-                    </li>
-                    <li class="nav-item dropdown"><a class="nav-link" href="#" data-toggle="dropdown">Court Cases<span
-                          class="nav-indicator"><i class="caret"></i></span> </a>
-                      <ul class="dropdown-menu dropdown-menu-rt" role="menu" style="width:auto;">
-                        <li class="nav-item"><a href="#">NGT</a></li>
-                      </ul>
-                    </li>
-                  </ul> -->
-            </div>
+               
+            
         </nav> 
         
           
           
     </div>
-    <!-- <div><img src="./images/design0.1.jpg" alt=""></div> -->
+
    
 </header>
 <body>

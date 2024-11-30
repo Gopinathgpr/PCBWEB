@@ -143,6 +143,8 @@ header .d-flex a:hover{
 
 nav{
     box-shadow: 1px 1px 2px 1px rgba(0, 0, 255, .2);
+    overflow-x: scroll;
+    scrollbar-width: none;
 }
 .fa-house{
     color: #198754;
@@ -182,4 +184,10 @@ nav{
 }
 .nav-link{
     white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+    nav{
+        display: none;
+    }
 }
