@@ -260,3 +260,122 @@
                     </div>
                   </header>
                   
+
+
+
+<!-- Swiper -->
+
+                  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+                  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+                  <section class="campaign-single py-5" style="background-color: #dcf8ec;">
+                    <div class="container">
+                      <div class="row justify-content-center">
+                        <div class="col-md-8">
+                          <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                              <!-- Slide 1 -->
+                              <div class="swiper-slide">
+                                <div class="testimonial-item bg-light rounded shadow-sm">
+                                  
+                                    <h5 class="mb-1">What's New</h5>
+                                    <img class="flex-shrink-0 p-2" src="images/news-1.png" alt="What's New Image" />
+                                  
+                                  <div>
+                                    <marquee behavior="scroll" direction="up" scrollamount="3" style="margin-bottom: 20px; height: 320px;" onmouseover="this.stop();" onmouseout="this.start();" class="slide-right-list">
+                                      <ul class="list-unstyled">
+                                        <li>
+                                          <a href="#" class="text-reset btn-link">
+                                            MoEF & CC notification G.S.R.702(E) dated 12.11.2024 regarding List of White Category of Sectors Classified by CPCB from Time to Time, As per the 2016 Classification Methodology.
+                                            <img src="img/gif/new-blink.gif" alt="Blink Icon" style="width: 40px; height: 40px; margin-right: 10px;" />
+                                          </a>
+                                        </li>
+                                        <li><a href="#" class="text-reset btn-link">Ambient Air Quality & Noise Level Report in Chennai City During Deepavali-2024.</a></li>
+                                        <li><a href="#" class="text-reset btn-link">Consent Fees Details.</a></li>
+                                        <li><a href="#" class="text-reset btn-link">TNPCB - EPR Booklet 2024 - Action Taken on Obligated Entities.</a></li>
+                                        <li><a href="#" class="text-reset btn-link">Extended Producer Responsibility(EPR) for Plastic Packaging - Registration of PIBOs and PWPs at EPR portal before 31.05.2024.</a></li>
+                                        <li><a href="#" class="text-reset btn-link">Retrofitting of Emission Control Devices in DG Sets with Capacity of 61 KW - less than 800 KW & above in the State of Tamil Nadu.</a></li>
+                                        <li><a href="#" class="text-reset btn-link">MoEF & CC notification G.S.R.724(E) dated 04.10.2021 regarding Regulation on Appropriate Use of Reverse Osmosis Based Water Purification System in the States/UTs.</a></li>
+                                      </ul>
+                                    </marquee>
+                                  </div>
+                                </div>
+                              </div>
+                              <!-- Slide 2 -->
+                              <div class="swiper-slide">
+                                <div class="testimonial-item bg-light rounded shadow-sm">
+                                  
+                                    <h5 class="mb-1">Tenders</h5>
+                                    <img class="flex-shrink-0 p-2" src="images/news-1.png" alt="Tender Image" />
+                                  
+                                  <div>
+                                    <marquee behavior="scroll" direction="up" scrollamount="3" style="margin-bottom: 20px; height: 320px;" onmouseover="this.stop();" onmouseout="this.start();" class="slide-right-list">
+                                      <ul class="list-unstyled">
+                                        <li>
+                                          <a href="#" class="text-reset btn-link">
+                                            MoEF & CC notification G.S.R.702(E) dated 12.11.2024 regarding List of White Category of Sectors Classified by CPCB from Time to Time, As per the 2016 Classification Methodology.
+                                            <img src="img/gif/new-blink.gif" alt="Blink Icon" style="width: 40px; height: 40px; margin-right: 10px;" />
+                                          </a>
+                                        </li>
+                                        <li><a href="#" class="text-reset btn-link">Ambient Air Quality & Noise Level Report in Chennai City During Deepavali-2024.</a></li>
+                                        <li><a href="#" class="text-reset btn-link">Consent Fees Details.</a></li>
+                                        <li><a href="#" class="text-reset btn-link">TNPCB - EPR Booklet 2024 - Action Taken on Obligated Entities.</a></li>
+                                        <li><a href="#" class="text-reset btn-link">Extended Producer Responsibility(EPR) for Plastic Packaging - Registration of PIBOs and PWPs at EPR portal before 31.05.2024.</a></li>
+                                        <li><a href="#" class="text-reset btn-link">Retrofitting of Emission Control Devices in DG Sets with Capacity of 61 KW - less than 800 KW & above in the State of Tamil Nadu.</a></li>
+                                        <li><a href="#" class="text-reset btn-link">MoEF & CC notification G.S.R.724(E) dated 04.10.2021 regarding Regulation on Appropriate Use of Reverse Osmosis Based Water Purification System in the States/UTs.</a></li>
+                                      </ul>
+                                    </marquee>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- Navigation Buttons -->
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+
+                  <script>
+                    const swiper = new Swiper('.swiper-container', {
+                      slidesPerView: 1,
+                      spaceBetween: 20,
+                      loop: true,
+                      navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                      },
+                    });
+                  </script>
+
+
+
+<!-- video gallery -->
+
+<div class="gallery-container">
+  <div class="video-gallery-section">
+    <h2>Video Gallery</h2>
+    <div class="video-gallery">
+      <div class="video-item">
+        <div class="video-thumbnail">
+          <img src="/img/banner1.jpg" alt="Video 1">
+          <button class="play-button" onclick="openModal('/video/Reels type.mp4')">▶</button>
+        </div>
+        <h3>Pollution Awareness</h3>
+        <p>Since 2003 Tectxon Manufacturing Services Have Manufactured Auto Metal Parts...</p>
+        <button class="play-now" onclick="openModal('/video/Reels type.mp4')">Play now</button>
+      </div>
+      <div class="video-item">
+        <div class="video-thumbnail">
+          <img src="/img/banner1.jpg" alt="Video 2">
+          <button class="play-button" onclick="openModal('/video/Reels type.mp4')">▶</button>
+        </div>
+        <h3>Pollution Awareness</h3>
+        <p>Since 2003 Tectxon Manufacturing Services Have Manufactured Auto Metal Parts...</p>
+        <button class="play-now" onclick="openModal('/video/Reels type.mp4')">Play now</button>
+      </div>
+    </div>
+  </div>
+</div>

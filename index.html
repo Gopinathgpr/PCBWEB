@@ -14,83 +14,88 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
   <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
     rel="stylesheet">
+
 </head>
+
 <script>
 
-  function adjustFontSize() {
-    const screenWidth = window.innerWidth;
+  // function adjustFontSize() {
+  //   const screenWidth = window.innerWidth;
 
-    // Check if the screen width is less than 1024px
-    if (screenWidth < 1024) {
-      // Calculate font size based on screen width
-      const fontSize = Math.max(9, Math.min(14, screenWidth / 50));
-      document.body.style.fontSize = fontSize + "px";
-    } else {
-      // Reset font size to default for wider screens
-      document.body.style.fontSize = "14px";
-    }
-  }
+  //   // Check if the screen width is less than 1024px
+  //   if (screenWidth < 1024) {
+  //     // Calculate font size based on screen width
+  //     const fontSize = Math.max(9, Math.min(16, screenWidth / 50));
+  //     document.body.style.fontSize = fontSize + "px";
+  //   } else {
+  //     // Reset font size to default for wider screens
+  //     document.body.style.fontSize = "14px";
+  //   }
+  // }
 
-  // Adjust font size on window resize and initial page load
-  window.addEventListener("resize", adjustFontSize);
-  window.addEventListener("load", adjustFontSize);
+  // // Adjust font size on window resize and initial page load
+  // window.addEventListener("resize", adjustFontSize);
+  // window.addEventListener("load", adjustFontSize);
 
 
-  function adjustH1FontSize() {
-    const screenWidth = window.innerWidth;
-    const fontSize = Math.max(20, Math.min(50, screenWidth / 20));
-    const h1Elements = document.querySelectorAll("h1");
-    h1Elements.forEach((h1) => {
-      h1.style.fontSize = fontSize + "px";
-    });
-  }
-  window.addEventListener("resize", adjustH1FontSize);
-  window.addEventListener("load", adjustH1FontSize);
+  // function adjustH1FontSize() {
+  //   const screenWidth = window.innerWidth;
+  //   const fontSize = Math.max(20, Math.min(50, screenWidth / 20));
+  //   const h1Elements = document.querySelectorAll("h1");
+  //   h1Elements.forEach((h1) => {
+  //     h1.style.fontSize = fontSize + "px";
+  //   });
+  // }
+  // window.addEventListener("resize", adjustH1FontSize);
+  // window.addEventListener("load", adjustH1FontSize);
 
-  function adjustH6FontSize() {
-    const screenWidth = window.innerWidth;
-    const fontSize = Math.max(12, Math.min(24, screenWidth / 50));
-    const h6Elements = document.querySelectorAll("h6");
-    h6Elements.forEach((h6) => {
-      h6.style.fontSize = fontSize + "px";
-    });
-  }
-  window.addEventListener("resize", adjustH6FontSize);
-  window.addEventListener("load", adjustH6FontSize);
+  // function adjustH6FontSize() {
+  //   const screenWidth = window.innerWidth;
+  //   const fontSize = Math.max(12, Math.min(24, screenWidth / 50));
+  //   const h6Elements = document.querySelectorAll("h6");
+  //   h6Elements.forEach((h6) => {
+  //     h6.style.fontSize = fontSize + "px";
+  //   });
+  // }
+  // window.addEventListener("resize", adjustH6FontSize);
+  // window.addEventListener("load", adjustH6FontSize);
 
-  function adjustH2FontSize() {
-    const screenWidth = window.innerWidth;
-    const fontSize = Math.max(16, Math.min(40, screenWidth / 25));
-    const h2Elements = document.querySelectorAll("h2");
-    h2Elements.forEach((h2) => {
-      h2.style.fontSize = fontSize + "px";
-    });
-  }
-  window.addEventListener("resize", adjustH2FontSize);
-  adjustH2FontSize();
+  // function adjustH2FontSize() {
+  //   const screenWidth = window.innerWidth;
+  //   const fontSize = Math.max(16, Math.min(40, screenWidth / 25));
+  //   const h2Elements = document.querySelectorAll("h2");
+  //   h2Elements.forEach((h2) => {
+  //     h2.style.fontSize = fontSize + "px";
+  //   });
+  // }
+  // window.addEventListener("resize", adjustH2FontSize);
+  // adjustH2FontSize();
 
-  function adjustAnchorFontSize() {
-    const screenWidth = window.innerWidth;
-    const fontSize = Math.max(9, Math.min(14, screenWidth / 50)); // Adjust these values as needed
-    const anchorElements = document.querySelectorAll("a");
-    anchorElements.forEach((anchor) => {
-      anchor.style.fontSize = fontSize + "px";
-    });
-  }
+  // function adjustAnchorFontSize() {
+  //   const screenWidth = window.innerWidth;
+  //   const fontSize = Math.max(9, Math.min(16, screenWidth / 50)); // Adjust these values as needed
+  //   const anchorElements = document.querySelectorAll("a");
+  //   anchorElements.forEach((anchor) => {
+  //     anchor.style.fontSize = fontSize + "px";
+  //   });
+  // }
 
   // Attach the function to the resize event and call it initially
-  window.addEventListener("resize", adjustAnchorFontSize);
-  adjustAnchorFontSize();
+  // window.addEventListener("resize", adjustAnchorFontSize);
+  // adjustAnchorFontSize();
+  // Add click event to toggle the search bar
+
 
 
 
 </script>
+
 <header>
   <div class="container-fluid  w-100 p-0">
-    <div class="row  bg-success m-0">
-      <div class="col-12 col-md-6 d-flex gap-2 align-items-center" style="padding:5px 50px;">
+    <div class="row m-0" style="background-color: #198754;">
+      <div class="col-12 col-md-6  d-flex gap-2 align-items-center" style="padding:5px 50px;">
         <div class="dropdown">
           <button class="btn btn-secondary dropdown-toggle btn1 bg-success" type="button" id="dropdownMenuButton1"
             data-bs-toggle="dropdown" aria-expanded="false">
@@ -108,10 +113,15 @@
       </div>
       <div class="col-12 col-md-6 d-flex justify-content-end gap-3 align-items-center" style="padding-right: 50px;">
         <div class="d-flex gap-3">
-          <div class="align-content-center"><i class="bi bi-search headicons p-2"></i></div>
-          <div class="align-content-center"><i class="bi bi-person-fill headicons p-2"></i></div>
-          <div class="align-content-center"><i class="bi bi-telephone headicons p-2"></i></div>
-
+          <div class="align-content-center searchbar position-relative">
+            <i class="bi bi-search headicons p-2"></i>
+          </div>
+          <div class="align-content-center">
+            <i class="bi bi-person-fill headicons p-2"></i>
+          </div>
+          <div class="align-content-center">
+            <i class="bi bi-telephone headicons p-2"></i>
+          </div>
         </div>
         <div class="d-flex gap-3">
           <div class="align-content-start"><a href=""><i class="fa-brands fa-twitter social-icons"></i></a></div>
@@ -258,21 +268,12 @@
             <li><a class="dropdown-item" href="#">NGT</a></li>
           </ul>
         </li>
-
       </ul>
-
-
     </nav>
-
-
-
   </div>
-
-
 </header>
 
 <body>
-
   <div class="banner">
     <!-- Image Section -->
     <div class="banner-image">
@@ -392,92 +393,81 @@
       </div> -->
   <div class="row bg-info mt-3 d-flex p-2">
     <!-- Carousel Section -->
-    <div id="carouselExampleControls" class="carousel slide col-md-8 col-12" data-bs-ride="carousel">
-      <div class="carousel-inner d-flex">
-        <!-- First carousel item -->
-        <div class="carousel-item active d-flex w-100 p-2">
-          <div class="col-md-6 col-12">
-            <h2 class="text-center" style="height: 50px;">What's New</h2>
-            <div>
-              <img src="images/news-1.png" alt="" class="img-fluid">
-              <p>
-                MoEF & CC notification G.S.R.702(E) dated 12.11.2024 regarding List of White Category of Sectors
-                Classified by CPCB from Time to Time, As per the 2016 Classification Methodology.
-                <br><br>
-                Ambient Air Quality & Noise Level Report in Chennai City During Deepavali-2024
-              </p>
+    <div class="col-md-8 d-flex gap-5 news-slider">
+      <!-- First carousel item -->
+      <div class="news-slider-item">
+        <h4 class="text-center">What's New</h4>
+        <div class="news-slider-content">
+          <img src="images/Recuitment.jpg" alt="" class="img-fluid">
+          <div class="pt-3 ps-2 pe-2">
+            <marquee behavior="scroll" direction="up" scrollamount="3" style="margin-bottom: 20px; height: 350px;"
+              onmouseover="this.stop();" onmouseout="this.start();">
+              <ul class="list-unstyled">
+                <li>
+                  <a href="#">
+                    &nbsp;&nbsp;MoEF & CC notification G.S.R.702(E) dated 12.11.2024 regarding List of White Category of
+                    Sectors Classified by CPCB from Time to Time, As per the 2016 Classification Methodology.
+                  </a><span class="blink">More details</span>
+                </li>
+                <li><a href="#">&nbsp;&nbsp;Ambient Air Quality & Noise Level Report in Chennai City During
+                    Deepavali-2024.</a><span class="blink">More details</span></li>
+                <li><a href="#">&nbsp;&nbsp;Consent Fees Details.</a><span class="blink">More details</span></li>
+                <li><a href="#">&nbsp;&nbsp;TNPCB - EPR Booklet 2024 - Action Taken on Obligated Entities.</a><span
+                    class="blink">More details</span></li>
+                <li><a href="#">&nbsp;&nbsp;Extended Producer Responsibility(EPR) for Plastic Packaging - Registration
+                    of PIBOs and PWPs at EPR portal before 31.05.2024.</a><span class="blink">&nbsp;&nbsp;More
+                    details</span></li>
+                <li><a href="#">&nbsp;&nbsp;Retrofitting of Emission Control Devices in DG Sets with Capacity of 61 KW -
+                    less than 800 KW & above in the State of Tamil Nadu.</a><span class="blink">More details</span></li>
+                <li><a href="#">&nbsp;&nbsp;MoEF & CC notification G.S.R.724(E) dated 04.10.2021 regarding Regulation on
+                    Appropriate Use of Reverse Osmosis Based Water Purification System in the States/UTs.</a><span
+                    class="blink">More details</span></li>
+              </ul>
+            </marquee>
+            <div><a href="" class="text-decoration-none"><span style="color: rgb(22, 211, 5);">View more -></span></a>
             </div>
           </div>
 
-          <!-- Second carousel item -->
-          <div class="col-md-6 col-12 p-2">
-            <h2 class="text-center" style="height: 50px;">What's New</h2>
-            <div>
-              <img src="images/news-1.png" alt="" class="img-fluid">
-              <p>
-                MoEF & CC notification G.S.R.702(E) dated 12.11.2024 regarding List of White Category of Sectors
-                Classified by CPCB from Time to Time, As per the 2016 Classification Methodology.
-                <br><br>
-                Extended Producer Responsibility(EPR) for Plastic Packaging - Registration of PIBOs and PWPs at EPR
-                portal before 31.05.2024
-              </p>
-            </div>
-          </div>
         </div>
+      </div>
 
-        <!-- Third carousel item -->
-        <div class="carousel-item d-flex w-100">
-          <div class="col-md-6 col-12">
-            <h2 class="text-center" style="height: 50px;">What's New</h2>
-            <div>
-              <img src="images/news-1.png" alt="" class="img-fluid">
-              <p>
-                MoEF & CC notification G.S.R.702(E) dated 12.11.2024 regarding List of White Category of Sectors
-                Classified by CPCB from Time to Time, As per the 2016 Classification Methodology.
-                <br><br>
-                Ambient Air Quality & Noise Level Report in Chennai City During Deepavali-2024
-              </p>
-            </div>
-          </div>
-
-          <!-- Fourth carousel item -->
-          <div class="col-md-6 col-12">
-            <h2 class="text-center" style="height: 50px;">What's New</h2>
-            <div>
-              <img src="images/news-1.png" alt="" class="img-fluid">
-              <p>
-                Ambient Air Quality & Noise Level Report in Chennai City During Deepavali-2024
-                <br><br>
-                Consent Fees Details
-                <br><br>
-                Extended Producer Responsibility(EPR) for Plastic Packaging - Registration of PIBOs and PWPs at EPR
-                portal before 31.05.2024
-              </p>
+      <!-- Second carousel item -->
+      <div class="news-slider-item">
+        <h4 class="text-center">What's New</h4>
+        <div class="news-slider-content">
+          <img src="images/Tenders.jpg" alt="" class="img-fluid">
+          <div class="pt-3 ps-2 pe-2">
+            <marquee behavior="scroll" direction="up" scrollamount="3" style="margin-bottom: 20px; height: 350px;"
+              onmouseover="this.stop();" onmouseout="this.start();">
+              <ul class="list-unstyled">
+                <li><a href="#">
+                    &nbsp;&nbsp;MoEF & CC notification G.S.R.702(E) dated 12.11.2024 regarding List of White Category of
+                    Sectors Classified by CPCB from Time to Time, As per the 2016 Classification Methodology.</a><span
+                    class="blink">More details</span>
+                </li>
+                <li><a href="#">&nbsp;&nbsp;Ambient Air Quality & Noise Level Report in Chennai City During
+                    Deepavali-2024.</a><span class="blink">More details</span></li>
+                <li><a href="#">&nbsp;&nbsp;Consent Fees Details.</a><span class="blink">More details</span></li>
+                <li><a href="#">&nbsp;&nbsp;TNPCB - EPR Booklet 2024 - Action Taken on Obligated Entities.</a><span
+                    class="blink">More details</span></li>
+                <li><a href="#">&nbsp;&nbsp;Extended Producer Responsibility(EPR) for Plastic Packaging - Registration
+                    of PIBOs and PWPs at EPR portal before 31.05.2024.</a><span class="blink">More details</span></li>
+                <li><a href="#">&nbsp;&nbsp;Retrofitting of Emission Control Devices in DG Sets with Capacity of 61 KW -
+                    less than 800 KW & above in the State of Tamil Nadu.</a><span class="blink">More details</span></li>
+                <li><a href="#">&nbsp;&nbsp;MoEF & CC notification G.S.R.724(E) dated 04.10.2021 regarding Regulation on
+                    Appropriate Use of Reverse Osmosis Based Water Purification System in the States/UTs.</a><span
+                    class="blink">More details</span></li>
+              </ul>
+            </marquee>
+            <div><a href="" class="text-decoration-none"><span style="color: rgb(22, 211, 5);">View more -></span></a>
             </div>
           </div>
         </div>
       </div>
-
-      <!-- Carousel controls -->
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
-        data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
-        data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
     </div>
 
-
-
-
-
     <!-- Card Section -->
-    <div class="col-md-4 col-12">
+    <div class="col-md-4">
       <!-- Card 1 -->
       <div class="card">
         <div class="card-image" style="background-image: url('images/minister.png');background-size: contain;"></div>
@@ -530,74 +520,145 @@
     </div>
   </div>
 
-  <section class="campaign-single py-5" style="background-color: #dcf8ec;">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 sticky-widget">
-          <div class="carousel-wrap">
-            <div class="owl-carousel cret">
-              <!-- First Carousel Item -->
-              <div class="item">
-                <div class="testimonial-item bg-light rounded shadow-sm">
-                  <div class="d-flex align-items-center mb-4">
-                    <h5 class="mb-1">What's New</h5>
-                    <img class="flex-shrink-0 p-2" src="images/news-1.png" alt="Tender Image" />
-                  </div>
-                  <div>
-                    <marquee behavior="scroll" direction="up" scrollamount="3" style="margin-bottom: 20px; height: 320px;" onmouseover="this.stop();" onmouseout="this.start();" class="slide-right-list">
-                      <ul class="list-unstyled">
-                        <li>
-                          <a href="#" class="text-reset btn-link">
-                            MoEF & CC notification G.S.R.702(E) dated 12.11.2024 regarding List of White Category of Sectors Classified by CPCB from Time to Time, As per the 2016 Classification Methodology.
-                            <img src="img/gif/new-blink.gif" alt="Blink Icon" style="width: 40px; height: 40px; margin-right: 10px;" />
-                          </a>
-                        </li>
-                        <li><a href="#" class="text-reset btn-link">Ambient Air Quality & Noise Level Report in Chennai City During Deepavali-2024.</a></li>
-                        <li><a href="#" class="text-reset btn-link">Consent Fees Details.</a></li>
-                        <li><a href="#" class="text-reset btn-link">TNPCB - EPR Booklet 2024 - Action Taken on Obligated Entities.</a></li>
-                        <li><a href="#" class="text-reset btn-link">Extended Producer Responsibility(EPR) for Plastic Packaging - Registration of PIBOs and PWPs at EPR portal before 31.05.2024.</a></li>
-                        <li><a href="#" class="text-reset btn-link">Retrofitting of Emission Control Devices in DG Sets with Capacity of 61 KW - less than 800 KW & above in the State of Tamil Nadu.</a></li>
-                        <li><a href="#" class="text-reset btn-link">MoEF & CC notification G.S.R.724(E) dated 04.10.2021 regarding Regulation on Appropriate Use of Reverse Osmosis Based Water Purification System in the States/UTs.</a></li>
-                      </ul>
-                    </marquee>
-                  </div>
-                </div>
-              </div>
-  
-              <!-- Second Carousel Item -->
-              <div class="item">
-                <div class="testimonial-item bg-light rounded shadow-sm">
-                  <div class="d-flex align-items-center mb-4">
-                    <h5 class="mb-1">Tenders</h5>
-                    <img class="flex-shrink-0 p-2" src="assets/images/tender.png" alt="Tender Image" />
-                  </div>
-                  <div>
-                    <marquee behavior="scroll" direction="up" scrollamount="3" style="margin-bottom: 20px; height: 320px;" onmouseover="this.stop();" onmouseout="this.start();" class="slide-right-list">
-                      <ul class="list-unstyled">
-                        <li>
-                          <a href="#" class="text-reset btn-link">
-                            MoEF & CC notification G.S.R.702(E) dated 12.11.2024 regarding List of White Category of Sectors Classified by CPCB from Time to Time, As per the 2016 Classification Methodology.
-                            <img src="img/gif/new-blink.gif" alt="Blink Icon" style="width: 40px; height: 40px; margin-right: 10px;" />
-                          </a>
-                        </li>
-                        <li><a href="#" class="text-reset btn-link">Ambient Air Quality & Noise Level Report in Chennai City During Deepavali-2024.</a></li>
-                        <li><a href="#" class="text-reset btn-link">Consent Fees Details.</a></li>
-                        <li><a href="#" class="text-reset btn-link">TNPCB - EPR Booklet 2024 - Action Taken on Obligated Entities.</a></li>
-                        <li><a href="#" class="text-reset btn-link">Extended Producer Responsibility(EPR) for Plastic Packaging - Registration of PIBOs and PWPs at EPR portal before 31.05.2024.</a></li>
-                        <li><a href="#" class="text-reset btn-link">Retrofitting of Emission Control Devices in DG Sets with Capacity of 61 KW - less than 800 KW & above in the State of Tamil Nadu.</a></li>
-                        <li><a href="#" class="text-reset btn-link">MoEF & CC notification G.S.R.724(E) dated 04.10.2021 regarding Regulation on Appropriate Use of Reverse Osmosis Based Water Purification System in the States/UTs.</a></li>
-                      </ul>
-                    </marquee>
-                  </div>
-                </div>
-              </div>
+  <div>
+    <h1 class="text-center gradient-text" style="margin: 85px;font-weight: 600;">Explore the photo and video gallery</h1>
+
+    <div class="row col ">
+      <div class="col-md-6 col-sm-12 photo-gallery overflow-scroll" style="scrollbar-width: none;">
+        <h3 class="text-center mb-5 fw-bold gradient-text">Photo Gallery</h3>
+        <marquee behavior="scroll" direction="left" scrollamount="5"  
+        onmouseover="this.stop();" onmouseout="this.start();">
+
+        <div class="d-flex gap-3 ">
+          <div class="big-image image-container"><img class="imgscale" src="images/imagegallery1.jpg" alt=""></div>
+          <div class="small-images d-flex flex-column gap-3 justify-content-center">
+            <div class="d-flex gap-3 ">
+              <div class="image-container"><img class="imgscale" src="images/imagegallery2.jpg" alt=""></div>
+              <div class="image-container"><img class="imgscale" src="images/imagegallery3.jpg" alt=""></div>
+            </div>
+            <div class="d-flex gap-3">
+              <div class="image-container"><img class="imgscale" src="images/imagegallery4.jpg" alt=""></div>
+              <div class="image-container"><img class="imgscale" src="images/imagegallery5.jpg" alt=""></div>
             </div>
           </div>
-        </div> <!-- End of col-lg-8 -->
-      </div> <!-- End of row -->
-    </div> <!-- End of container -->
-  </section>
-  
+          <div class="big-image image-container"><img class="imgscale" src="images/imagegallery6.jpg" alt=""></div>
+        </div>
+        </marquee>
+ 
+      </div>
+      <div class="col-md-6 col-sm-12 overflow-scroll" style="scrollbar-width: none;">
+        <h3 class="text-center fw-bold gradient-text mb-5">Video Gallery</h3>
+        <div class="video-gallery d-flex gap-3 overflow-auto" style="scrollbar-width: none; white-space: nowrap;">
+          <div class="video-item" style="flex: 0 0 auto; width: 250px;">
+            <div class="video-thumbnail image-container position-relative">
+              <img class="imgscale" src="images/videogallery1.png" alt="Video 1">
+              <button class="play-button position-absolute" onclick="openModal('/video/Reels type.mp4')">▶</button>
+            </div>
+            <h6>Pollution Awareness</h6>
+            <p>Since 2003 Tectxon  </p>
+            <button class="play-now btn btn-primary" onclick="openModal('/video/Reels type.mp4')">Play now</button>
+          </div>
+          <div class="video-item" style="flex: 0 0 auto; width: 250px;">
+            <div class="video-thumbnail image-container position-relative">
+              <img class="imgscale" src="images/videogallery1.png" alt="Video 1">
+              <button class="play-button position-absolute" onclick="openModal('/video/Reels type.mp4')">▶</button>
+            </div>
+            <h6>Pollution Awareness</h6>
+            <p>Since 2003 Tectxon</p>
+            <button class="play-now btn btn-primary" onclick="openModal('/video/Reels type.mp4')">Play now</button>
+          </div>
+          <div class="video-item" style="flex: 0 0 auto; width: 250px;">
+            <div class="video-thumbnail image-container position-relative">
+              <img class="imgscale" src="images/videogallery1.png" alt="Video 1">
+              <button class="play-button position-absolute" onclick="openModal('/video/Reels type.mp4')">▶</button>
+            </div>
+            <h6>Pollution Awareness</h6>
+            <p>Since 2003 Tectxon </p>
+            <button class="play-now btn btn-primary" onclick="openModal('/video/Reels type.mp4')">Play now</button>
+          </div>
+          
+        </div>
+      </div>
+      
+    </div>
+  </div>
+<script>
+  const videoGallery = document.querySelector('.video-gallery');
+
+let isDown = false;
+let startX, scrollLeft;
+
+videoGallery.addEventListener('mousedown', (e) => {
+  isDown = true;
+  videoGallery.classList.add('active');
+  startX = e.pageX - videoGallery.offsetLeft;
+  scrollLeft = videoGallery.scrollLeft;
+});
+
+videoGallery.addEventListener('mouseleave', () => {
+  isDown = false;
+  videoGallery.classList.remove('active');
+});
+
+videoGallery.addEventListener('mouseup', () => {
+  isDown = false;
+  videoGallery.classList.remove('active');
+});
+
+videoGallery.addEventListener('mousemove', (e) => {
+  if (!isDown) return;
+  e.preventDefault();
+  const x = e.pageX - videoGallery.offsetLeft;
+  const walk = (x - startX) * 2; // The scroll speed multiplier
+  videoGallery.scrollLeft = scrollLeft - walk;
+});
+
+</script>
 </body>
+<img class="img-fluid" src="images/Footer image animate.jpg" alt="">
+<footer class="footer">
+
+  <div class="footer-content">
+    <div class="footer-section address">
+      <h4>Corporate Office</h4>
+      <p>
+      Tamil Nadu Pollution Control Board<br />
+      76, Mount Salai, Guindy, Chennai - 600 032<br />
+      Phone: 044-22353134-139<br />
+      Fax: 044-22353068<br />
+      Email: <a href="mailto:grievance@tnpcb.gov.in">grievance@tnpcb.gov.in</a></p>
+    </div>
+
+    <div class="footer-section links d-flex flex-column gap-5">
+      <h4>Important Links</h4>
+      <ul style="display: flex; gap: 10px; justify-content: center;">
+        <li><a href="#">Feedback</a></li>
+        <li><a href="#">Help Desk</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Sitemap</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+      <div class="d-flex gap-3 justify-content-center">
+        <div class="align-content-start"><a href=""><i class="fa-brands fa-twitter social-icons"></i></a></div>
+        <div class="align-content-start"><a href=""><i class="fa-brands fa-linkedin-in social-icons"></i></a></div>
+        <div class="align-content-start"><a href=""><i class="fa-brands fa-instagram social-icons"></i></a></div>
+        <div class="align-content-start"><a href=""><i class="fa-brands fa-facebook social-icons"></i></a></div>
+      </div>
+    </div>
+
+    <div class="footer-section social">
+      <h4>Follow Us</h4>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d59842.94842260002!2d80.1424769985266!3d13.038383130427611!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52676d34cb0ec3%3A0xd0c6d9d643ee58a7!2sTamil%20Nadu%20Pollution%20Control%20Board!5e1!3m2!1sen!2sin!4v1732961461203!5m2!1sen!2sin"
+        width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <p>Total Visitors: 3,133,436</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+
+    <p>Copyright © 2024 | TNPCB. All rights reserved.</p>
+  </div>
+</footer>
 
 </html>
